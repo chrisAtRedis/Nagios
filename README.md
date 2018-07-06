@@ -34,7 +34,10 @@ You want to copy the complete library directory hierarchy in order to avoid any 
 11. If you haven't made any mistakes, your should be able to see working Nagios installation on Nagios server IP (don't forget 
 to add /nagios3 to the URL :-) after login with nagiosadmin/<password> which includes the shard stats apart from other
 services as configured in redis.cfg described above.
+  
+Steps 2 - 5 have to be repeated for every cluster node which is going to be monitored by this Nagios instance.
 
 Disclaimer: This is not a polished Nagion configuration but rather "rough and ready" as I wanted to prove the concept.
 For production use, you would certainly hard this and confgure the standard installation to your exact needs rather
-than going with this generic approach.
+than going with this generic approach. Never mind using Ansible or Chef as an orchestration tool for much more automated
+deployment of this infrastructure :-).
