@@ -25,7 +25,9 @@ This will take care of invoking a Perl script which does the actual checking on 
   https://github.com/harisekhon/nagios-plugins
  ```
 In this directory either do a full build of all the plugins or simply the perl-libs (make build or make perl-libs)
-8. Copy the support libraries (directory ./lib) to a location where Perl will be able to find them (hint: perl -e "print qq(@INC)" is your friend). 
+
+8. Copy the support libraries (directory ./lib) to a location where Perl will be able to find them 
+(hint: perl -e "print qq(@INC)" is your friend). 
 You want to copy the complete library directory hierarchy in order to avoid any missing modules.
 9. Copy the relevant Perl scripts to /usr/local/bin (you only need check_redis_stats.pl for the above configuration). 
 10. Start the Nagios systemd service or restart it if it's already running to reflect the changed configuration.
