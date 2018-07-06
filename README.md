@@ -18,10 +18,12 @@ address of the FQDN or IP address of the cluster node in the relevant stanzas of
 as the relevant check_command entry. 
 6. In your commands.cfg file (in /etc/nagios3) add another command stanza with the command line: 
 ```/usr/local/bin/check_redis_stats.pl -P <port #> -H <target node address>
+```
 (amend with -p for password details as required if the shard on your target node requires this).
 This will take care of invoking a Perl script which does the actual checking on the target node.
 7. Clone the following Github repo into a directory:
 ```https://github.com/harisekhon/nagios-plugins
+```
 In this directory either do a full build of all the plugins or simply the perl-libs (make build or make perl-libs)
 8. Copy the support libraries (directory ./lib) to a location where Perl will be able to find them (hint: perl -e "print qq(@INC)" is your friend). 
 You want to copy the complete library directory hierarchy in order to avoid any missing modules.
